@@ -53,7 +53,7 @@ namespace PasswordManager
             {
                 if (textBoxMasterPassword.Text == "")
                 {
-                    MessageBox.Show("Не введен пароль!");
+                    MessageBox.Show("Пустое поле с паролем!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 EnterToFrom();
@@ -94,7 +94,7 @@ namespace PasswordManager
                 else
                     buttonRegistration.Visible = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Не удалось загрузить данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -105,12 +105,12 @@ namespace PasswordManager
         {
             if (textBoxMasterPassword.Text == "")
             {
-                MessageBox.Show("Не введен пароль!");
+                MessageBox.Show("Пустое поле с паролем!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (password == textBoxMasterPassword.Text)
             {
-                MessageBox.Show("Такой пароль существует!");
+                MessageBox.Show("Такой пароль существует!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             users.Password.Add(textBoxMasterPassword.Text);
