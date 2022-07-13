@@ -34,29 +34,5 @@ namespace PasswordManager.Properties {
                 this["TEXTBOX_VALUE"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool BUTTON_REGISTER_FALSE {
-            get {
-                return ((bool)(this["BUTTON_REGISTER_FALSE"]));
-            }
-            set {
-                this["BUTTON_REGISTER_FALSE"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool BUTTON_REGISTER_TRUE {
-            get {
-                return ((bool)(this["BUTTON_REGISTER_TRUE"]));
-            }
-            set {
-                this["BUTTON_REGISTER_TRUE"] = value;
-            }
-        }
     }
 }
