@@ -12,6 +12,8 @@ using System.IO;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Net.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace PasswordManager
 {
@@ -117,16 +119,20 @@ namespace PasswordManager
             { 
                 labelLenght.Text = string.Format($"Длина пароля: {trackBarLenght.Value}");
                 //
-                textBoxPasswordList.Clear();
-                textBoxPasswordList.Text += PasswordGenerator(
+                int count = trackBarCountPassword.Value;
+                string[] passwords = new string[count];
+                for (int i = 0; i < count; i++)
+                {
+                    textBoxPasswordList.Clear();
+                    passwords[i] = textBoxPasswordList.Text += PasswordGenerator(
                             checkBoxUpperCase.Checked,
                             checkBoxLowerCase.Checked,
                             checkBoxNumber.Checked,
                             checkBoxSpecial.Checked,
                             trackBarLenght.Value);
-                textBoxPasswordList.AppendText(Environment.NewLine);
-                textbox = textBoxPasswordList.Text;
-                labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length - 1}");
+                }
+                textBoxPasswordList.Text = string.Join(Environment.NewLine, passwords);
+                labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length}");
             };
 
             labelCountPassword.Text = string.Format($"Количество паролей: 0");
@@ -134,7 +140,20 @@ namespace PasswordManager
             { 
                 labelCountPassword.Text = string.Format($"Количество паролей: {trackBarCountPassword.Value}");
                 //
-                
+                int count = trackBarCountPassword.Value;
+                string[] passwords = new string[count];
+                for (int i = 0; i < count; i++)
+                {
+                    textBoxPasswordList.Clear();
+                    passwords[i] = textBoxPasswordList.Text += PasswordGenerator(
+                            checkBoxUpperCase.Checked,
+                            checkBoxLowerCase.Checked,
+                            checkBoxNumber.Checked,
+                            checkBoxSpecial.Checked,
+                            trackBarLenght.Value);
+                }
+                textBoxPasswordList.Text = string.Join(Environment.NewLine, passwords);
+                labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length}");
             };
 
             labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: 0");
@@ -156,6 +175,8 @@ namespace PasswordManager
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            textBoxPasswordList.TabStop = false;
+
             labelLenght.Text = $"Длина пароля: {trackBarLenght.Value = 6}";
             labelCountPassword.Text = $"Количество паролей: {trackBarCountPassword.Value = 1}";
             checkBoxUpperCase.Checked = true;
@@ -164,15 +185,20 @@ namespace PasswordManager
             checkBoxSpecial.Checked = true;
             radioButton1.Checked = false;
 
-            textBoxPasswordList.Text += PasswordGenerator(
-                            checkBoxUpperCase.Checked,
-                            checkBoxLowerCase.Checked,
-                            checkBoxNumber.Checked,
-                            checkBoxSpecial.Checked,
-                            trackBarLenght.Value);
-            textBoxPasswordList.AppendText(Environment.NewLine);
-            textbox = textBoxPasswordList.Text;
-            labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length - 1}");
+            int count = trackBarCountPassword.Value;
+            string[] passwords = new string[count];
+            for (int i = 0; i < count; i++)
+            {
+                textBoxPasswordList.Clear();
+                passwords[i] = textBoxPasswordList.Text += PasswordGenerator(
+                        checkBoxUpperCase.Checked,
+                        checkBoxLowerCase.Checked,
+                        checkBoxNumber.Checked,
+                        checkBoxSpecial.Checked,
+                        trackBarLenght.Value);
+            }
+            textBoxPasswordList.Text = string.Join(Environment.NewLine, passwords);
+            labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length}");
 
             Opacity = 0;
             Timer timer = new Timer();
@@ -222,7 +248,6 @@ namespace PasswordManager
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        public static string textbox;
         private void buttonGenerator_Click(object sender, EventArgs e)
         {
             if (checkBoxUpperCase.Checked == false &&
@@ -242,18 +267,20 @@ namespace PasswordManager
                 }
                 else
                 {
-                    for (int i = 0; i < trackBarCountPassword.Value; i++)
+                    int count = trackBarCountPassword.Value;
+                    string[] passwords = new string[count];
+                    for (int i = 0; i < count; i++)
                     {
-                        textBoxPasswordList.Text += PasswordGenerator(
-                            checkBoxUpperCase.Checked,
-                            checkBoxLowerCase.Checked,
-                            checkBoxNumber.Checked,
-                            checkBoxSpecial.Checked,
-                            trackBarLenght.Value);
-                        textBoxPasswordList.AppendText(Environment.NewLine);
-                        textbox = textBoxPasswordList.Text;
-                        labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length - 1}");
+                        textBoxPasswordList.Clear();
+                        passwords[i] = textBoxPasswordList.Text += PasswordGenerator(
+                                checkBoxUpperCase.Checked,
+                                checkBoxLowerCase.Checked,
+                                checkBoxNumber.Checked,
+                                checkBoxSpecial.Checked,
+                                trackBarLenght.Value);
                     }
+                    textBoxPasswordList.Text = string.Join(Environment.NewLine, passwords);
+                    labelCountPasswordResult.Text = string.Format($"Количество сгенерированных паролей: {textBoxPasswordList.Lines.Length}");
                 }
             }
         }

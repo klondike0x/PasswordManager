@@ -40,6 +40,7 @@
             this.exitForm = new System.Windows.Forms.Label();
             this.textBoxPasswordList = new System.Windows.Forms.TextBox();
             this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+            this.trackBarCountPassword = new System.Windows.Forms.TrackBar();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.labelCountPassword = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
@@ -57,14 +58,13 @@
             this.labelCountPasswordResult = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonInformation = new System.Windows.Forms.Label();
-            this.trackBarCountPassword = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKlondike)).BeginInit();
             this.groupBoxSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCountPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLenght)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarCountPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,6 +158,17 @@
             this.groupBoxSettings.TabIndex = 4;
             this.groupBoxSettings.TabStop = false;
             this.groupBoxSettings.Text = "Параметры пароля";
+            // 
+            // trackBarCountPassword
+            // 
+            this.trackBarCountPassword.Location = new System.Drawing.Point(6, 97);
+            this.trackBarCountPassword.Maximum = 50;
+            this.trackBarCountPassword.Minimum = 1;
+            this.trackBarCountPassword.Name = "trackBarCountPassword";
+            this.trackBarCountPassword.Size = new System.Drawing.Size(191, 45);
+            this.trackBarCountPassword.TabIndex = 11;
+            this.trackBarCountPassword.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarCountPassword.Value = 1;
             // 
             // radioButton1
             // 
@@ -322,17 +333,6 @@
             this.buttonInformation.TabIndex = 5;
             this.buttonInformation.Text = "О программе";
             // 
-            // trackBarCountPassword
-            // 
-            this.trackBarCountPassword.Location = new System.Drawing.Point(6, 97);
-            this.trackBarCountPassword.Maximum = 50;
-            this.trackBarCountPassword.Minimum = 1;
-            this.trackBarCountPassword.Name = "trackBarCountPassword";
-            this.trackBarCountPassword.Size = new System.Drawing.Size(191, 45);
-            this.trackBarCountPassword.TabIndex = 11;
-            this.trackBarCountPassword.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBarCountPassword.Value = 1;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,11 +360,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKlondike)).EndInit();
             this.groupBoxSettings.ResumeLayout(false);
             this.groupBoxSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarCountPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLenght)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarCountPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
