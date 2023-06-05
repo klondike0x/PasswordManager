@@ -11,4 +11,4 @@
 
 Программа полностью бесплатная и не требует ни какой установки, скачал и пользуешься, все просто :)
 
-![image](https://user-images.githubusercontent.com/74517083/176993359-25cf5607-13b4-44f3-87f6-a39b96b02c00.png)
+![image](https://user-images.githubusercontent.com/74517083/224509783-b8a9471e-5b84-499c-be64-60f34bdf4d49.png)
