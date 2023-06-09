@@ -20,7 +20,7 @@
 - [С#](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjjo-Gp9LX_AhXIlosKHUczAw8QFnoECAoQAQ&url=https%3A%2F%2Flearn.microsoft.com%2Fru-ru%2Fdotnet%2Fcsharp%2F&usg=AOvVaw3HdWXu3XtZTS0gNtv1WTk6)
 
 ## To do
-- [x] Выбор длинны пароля
+- [x] Выбор длины пароля
 - [x] Рекомендация пароля
 - [x] Сохраняет в указанный путь в формате TXT
 - [x] Мониторинг количество сгенерированных паролей
