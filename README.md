@@ -28,4 +28,4 @@
 [![Egorov Daniil](https://img.shields.io/badge/-Daniil%20Egorov-black?logo=GitHub)](https://github.com/klondike0x)
 
 ## Источники
-[![Youtube](https://youtube.com/playlist?list=PL05SB3rBbUsraqiEUeS70RKhVAu97nGeb)]
+[![Youtube](https://img.shields.io/badge/-Youtube-informational?color=white&logo=Youtube&logoColor=%23302683)](https://youtube.com/playlist?list=PL05SB3rBbUsraqiEUeS70RKhVAu97nGeb)
