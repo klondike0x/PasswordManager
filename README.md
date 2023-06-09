@@ -1,6 +1,6 @@
 # PasswordManager
 
-PasswordManager - генератор паролей, сделанный на языке C# с открытым исходным кодом.
+Менеджер паролей - генератор паролей, сделанный на языке C# с открытым исходным кодом.
 
 ---
 ![image](https://user-images.githubusercontent.com/74517083/224509783-b8a9471e-5b84-499c-be64-60f34bdf4d49.png)
@@ -28,3 +28,4 @@ PasswordManager - генератор паролей, сделанный на я�
 [![Egorov Daniil](https://img.shields.io/badge/-Daniil%20Egorov-black?logo=GitHub)](https://github.com/klondike0x)
 
 ## Источники
+[![Youtube](https://youtube.com/playlist?list=PL05SB3rBbUsraqiEUeS70RKhVAu97nGeb)]
